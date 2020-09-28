@@ -1,0 +1,18 @@
+syntax = "proto3";
+package ping;
+option go_package = "grpc_practice/protobuf/ping";
+// The greeting service definition.
+service PingPongService {
+  // Sends a greeting
+  rpc PingPong (PingRequest) returns (PongResponse) {}
+}
+
+// The request message containing the user's name.
+message PingRequest {
+  string ping = 1;
+}
+
+// The response message containing the greetings
+message PongResponse {
+  string pong = 1;
+}
